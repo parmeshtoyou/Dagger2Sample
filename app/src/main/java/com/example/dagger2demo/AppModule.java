@@ -19,4 +19,9 @@ public class AppModule {
     public SharedPreferences provideSharedPref() {
         return mContext.getSharedPreferences("shared_pref", Context.MODE_PRIVATE);
     }
+
+    @Provides
+    public User getUser() {
+        return new User("Parmesh", "Mahore");
+    }
 }

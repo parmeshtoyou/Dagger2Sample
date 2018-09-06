@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     SharedPreferences sharedPreferences;
 
+    @Inject
+    User user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         String text = sharedPreferences.getString("KEY", "");
-        Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, user.getfName(), Toast.LENGTH_LONG).show();
     }
 }
